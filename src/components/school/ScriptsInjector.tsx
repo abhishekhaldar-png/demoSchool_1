@@ -50,7 +50,7 @@ export default function ScriptInjector() {
 
       localStorage.setItem("custom_script", value);
       setOpen(false);
-      setIsInjected(true); 
+      setIsInjected(true);
     } catch (e) {
       console.error(e);
     }
@@ -128,7 +128,7 @@ export default function ScriptInjector() {
             />
 
             <div style={{ marginTop: "10px", display: "flex", gap: "10px" }}>
-              
+
               {/* ✅ Toggle Button */}
               {!isInjected ? (
                 <button
@@ -172,5 +172,6 @@ export default function ScriptInjector() {
         </div>
       )}
     </>
+
   );
 }
