@@ -4,57 +4,70 @@ import { useState, useEffect } from "react";
 export default function ScriptInjector() {
   const [open, setOpen] = useState(false);
   const [script, setScript] = useState("");
+  const [isInjected, setIsInjected] = useState(false);
 
   // Load saved script on refresh
   useEffect(() => {
     const saved = localStorage.getItem("custom_script");
-    if (saved) injectScript(saved);
+    if (saved) {
+      setScript(saved);
+      injectScript(saved);
+      setIsInjected(true);
+    }
   }, []);
 
-const injectScript = (scriptValue?: string) => {
-  const value = scriptValue || script;
+  const injectScript = (scriptValue?: string) => {
+    const value = scriptValue || script;
 
-  try {
-  
+    try {
+      const existing = document.querySelector(
+        'script[data-custom="true"]'
+      );
+      if (existing) existing.remove();
+
+      const scriptTag = document.createElement("script");
+
+      const srcMatch = value.match(/src=["'](.*?)["']/);
+
+      if (srcMatch && srcMatch[1]) {
+        scriptTag.src = srcMatch[1];
+      } else {
+        scriptTag.innerHTML = value;
+      }
+
+      scriptTag.async = true;
+      scriptTag.setAttribute("data-custom", "true");
+
+      scriptTag.onload = () => {
+        console.log(" Script loaded successfully");
+      };
+
+      scriptTag.onerror = () => {
+        console.error(" Script failed to load");
+      };
+
+      document.body.appendChild(scriptTag);
+
+      localStorage.setItem("custom_script", value);
+      setOpen(false);
+      setIsInjected(true); 
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+
+  const removeScript = () => {
     const existing = document.querySelector(
       'script[data-custom="true"]'
     );
     if (existing) existing.remove();
 
-    const scriptTag = document.createElement("script");
-
-
-    const srcMatch = value.match(/src=["'](.*?)["']/);
-
-    if (srcMatch && srcMatch[1]) {
-      scriptTag.src = srcMatch[1];
-    } else {
-      scriptTag.innerHTML = value;
-    }
-
-    scriptTag.async = true;
-    scriptTag.setAttribute("data-custom", "true");
-
-
-    scriptTag.onload = () => {
-      console.log(" Script loaded successfully");
-    };
-
-    scriptTag.onerror = () => {
-      console.error(" Script failed to load");
-    };
-
-    document.body.appendChild(scriptTag);
-
-    localStorage.setItem("custom_script", value);
-
-    alert("Script Injected!");
+    localStorage.removeItem("custom_script");
+    setIsInjected(false);
     setOpen(false);
-  } catch (e) {
-    console.error(e);
-    alert("❌ Invalid Script");
-  }
-};
+    window.location.reload();
+  };
 
   return (
     <>
@@ -64,7 +77,7 @@ const injectScript = (scriptValue?: string) => {
         style={{
           position: "fixed",
           bottom: "20px",
-          right: "20px",
+          left: "40px",
           background: "#2563eb",
           color: "#fff",
           padding: "12px 16px",
@@ -74,7 +87,7 @@ const injectScript = (scriptValue?: string) => {
           zIndex: 9999,
         }}
       >
-        Add Script
+        {isInjected ? "Manage Script" : "Add Script"}
       </button>
 
       {/* Modal */}
@@ -115,17 +128,33 @@ const injectScript = (scriptValue?: string) => {
             />
 
             <div style={{ marginTop: "10px", display: "flex", gap: "10px" }}>
-              <button
-                onClick={() => injectScript()}
-                style={{
-                  background: "green",
-                  color: "#fff",
-                  padding: "8px 12px",
-                  border: "none",
-                }}
-              >
-                Inject
-              </button>
+              
+              {/* ✅ Toggle Button */}
+              {!isInjected ? (
+                <button
+                  onClick={() => injectScript()}
+                  style={{
+                    background: "green",
+                    color: "#fff",
+                    padding: "8px 12px",
+                    border: "none",
+                  }}
+                >
+                  Inject
+                </button>
+              ) : (
+                <button
+                  onClick={removeScript}
+                  style={{
+                    background: "red",
+                    color: "#fff",
+                    padding: "8px 12px",
+                    border: "none",
+                  }}
+                >
+                  Remove Script
+                </button>
+              )}
 
               <button
                 onClick={() => setOpen(false)}
