@@ -47,7 +47,7 @@ export default function AboutSection() {
                 <div className="w-full h-full" style={{ background: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80') center/cover" }} />
               </div>
               <blockquote className="text-[16px] italic text-navy leading-[1.7] font-light border-l-[3px] border-gold pl-[18px] mb-[18px]">
-                "At Meridian, we don't just educate — we inspire. Every child carries the potential to change the world, and our role is to nurture that flame."
+                "At Edustoke.international, we don't just educate — we inspire. Every child carries the potential to change the world, and our role is to nurture that flame."
               </blockquote>
               <div className="text-[14px] font-bold text-navy">Dr. Ramesh Krishnan</div>
               <div className="text-[12px] text-m-gray-400">Principal & Director</div>

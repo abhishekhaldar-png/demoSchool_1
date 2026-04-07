@@ -1,5 +1,5 @@
 const news = [
-  { cat: "Achievement", date: "Mar 15, 2025", title: "Meridian Students Win National Science Olympiad", excerpt: "Three students from Grade 10 secured gold medals at the prestigious National Science Olympiad competition held in New Delhi.", img: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500&q=80" },
+  { cat: "Achievement", date: "Mar 15, 2025", title: "Edustoke.international Students Win National Science Olympiad", excerpt: "Three students from Grade 10 secured gold medals at the prestigious National Science Olympiad competition held in New Delhi.", img: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500&q=80" },
   { cat: "Event", date: "Mar 10, 2025", title: "Annual Sports Day 2025", excerpt: "", img: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" },
   { cat: "News", date: "Mar 5, 2025", title: "New STEM Lab Inauguration", excerpt: "", img: "https://images.unsplash.com/photo-1581092921461-eab10380ed8f?w=400&q=80" },
 ];

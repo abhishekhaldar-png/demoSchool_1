@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-[1000] bg-card/97 backdrop-blur-[20px] border-b border-m-gray-100 transition-all duration-300 ${scrolled ? "shadow-m-md" : ""}`}>
+      <nav className={`bg-white fixed top-0 left-0 right-0 z-[1000] bg-card/97 backdrop-blur-[20px] border-b border-m-gray-100 transition-all duration-300 ${scrolled ? "shadow-m-md" : ""}`}>
         <div className="max-w-[1320px] mx-auto px-8 flex items-center justify-between h-[72px]">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-3 no-underline">

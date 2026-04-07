@@ -3,7 +3,7 @@ import { useState } from "react";
 const infoCards = [
   { icon: "📍", title: "Address", desc: "Sector 57, Gurugram, Haryana 122011" },
   { icon: "📞", title: "Phone", desc: "+91 124-4567890 / +91 98765 43210" },
-  { icon: "✉️", title: "Email", desc: "admissions@meridian.edu.in" },
+  { icon: "✉️", title: "Email", desc: "admissions@Edustoke.international.edu.in" },
   { icon: "🕐", title: "Office Hours", desc: "Mon – Sat: 8:00 AM – 4:00 PM" },
 ];
 

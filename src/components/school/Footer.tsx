@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-11 h-11 bg-gold rounded-[10px] flex items-center justify-center text-[22px] font-extrabold text-navy">M</div>
               <div>
-                <span className="block text-[15px] font-bold text-card leading-tight">Meridian International</span>
+                <span className="block text-[15px] font-bold text-card leading-tight">Edustoke.international International</span>
                 <span className="text-[10px] text-card/40 tracking-[.5px] uppercase">Gurugram · Est. 1998</span>
               </div>
             </div>

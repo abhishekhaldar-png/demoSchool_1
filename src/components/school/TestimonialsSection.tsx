@@ -1,9 +1,9 @@
 import { useRef } from "react";
 
 const testimonials = [
-  { text: "Meridian transformed our daughter's confidence. The teachers truly care about each child's growth and potential.", name: "Priya Sharma", role: "Parent, Grade 8", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" },
-  { text: "The STEM program here is exceptional. I got into IIT Delhi thanks to the strong foundation Meridian provided.", name: "Arjun Mehta", role: "Alumni, Batch 2022", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" },
-  { text: "As a Cambridge curriculum parent, I appreciate the global perspective Meridian brings to education.", name: "Sarah Williams", role: "Parent, Grade 5", img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" },
+  { text: "Edustoke.international transformed our daughter's confidence. The teachers truly care about each child's growth and potential.", name: "Priya Sharma", role: "Parent, Grade 8", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" },
+  { text: "The STEM program here is exceptional. I got into IIT Delhi thanks to the strong foundation Edustoke.international provided.", name: "Arjun Mehta", role: "Alumni, Batch 2022", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" },
+  { text: "As a Cambridge curriculum parent, I appreciate the global perspective Edustoke.international brings to education.", name: "Sarah Williams", role: "Parent, Grade 5", img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" },
   { text: "The co-curricular activities and sports facilities are world-class. My son has flourished both academically and personally.", name: "Rajesh Kumar", role: "Parent, Grade 10", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" },
 ];
 

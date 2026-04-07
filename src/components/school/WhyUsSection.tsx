@@ -27,7 +27,7 @@ export default function WhyUsSection() {
               A Legacy of <em className="not-italic text-gold">Academic Excellence</em>
             </h2>
             <p className="text-[15px] font-light text-m-gray-600 max-w-[520px] mt-3.5 leading-[1.7]">
-              For over 25 years, Meridian has been nurturing young minds to become confident, compassionate global citizens.
+              For over 25 years, Edustoke.international has been nurturing young minds to become confident, compassionate global citizens.
             </p>
 
             <div className="flex flex-col gap-5 mt-9">

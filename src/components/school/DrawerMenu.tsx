@@ -29,7 +29,7 @@ export default function DrawerMenu({ open, onClose }: DrawerMenuProps) {
           <a href="#hero" className="flex items-center gap-[10px] no-underline" onClick={onClose}>
             <div className="w-[38px] h-[38px] bg-gold rounded-[9px] flex items-center justify-center text-[18px] font-extrabold text-navy">M</div>
             <div>
-              <span className="block text-[13px] font-bold text-card leading-tight">Meridian International</span>
+              <span className="block text-[13px] font-bold text-card leading-tight">Edustoke.international International</span>
               <span className="text-[10px] text-card/40 tracking-[.5px] uppercase">Gurugram · Est. 1998</span>
             </div>
           </a>
@@ -59,7 +59,7 @@ export default function DrawerMenu({ open, onClose }: DrawerMenuProps) {
           <a href="#contact" onClick={onClose} className="block w-full py-3 rounded-r-md bg-transparent text-card border border-card/20 text-center font-semibold text-[14px] no-underline hover:border-card/50 transition-all">Contact Us</a>
           <div className="mt-5 flex flex-col gap-2">
             <span className="text-[12px] text-card/[.38] font-light">📞 +91 124-4567890</span>
-            <span className="text-[12px] text-card/[.38] font-light">✉️ admissions@meridian.edu.in</span>
+            <span className="text-[12px] text-card/[.38] font-light">✉️ admissions@Edustoke.international.edu.in</span>
           </div>
         </div>
       </div>

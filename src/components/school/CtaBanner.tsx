@@ -5,7 +5,7 @@ export default function CtaBanner() {
         <div className="absolute -right-[60px] -top-[60px] w-[300px] h-[300px] rounded-full bg-gold/[.08]" />
         <div className="absolute right-[60px] -bottom-[80px] w-[200px] h-[200px] rounded-full bg-teal/[.06]" />
         <div className="relative z-[1]">
-          <h2 className="text-[30px] font-extrabold text-card tracking-[-1px] mb-[7px]">Ready to Join the Meridian Family?</h2>
+          <h2 className="text-[30px] font-extrabold text-card tracking-[-1px] mb-[7px]">Ready to Join the Edustoke.international Family?</h2>
           <p className="text-[14px] text-card/55 font-light">Admissions are open for 2025–26. Limited seats available.</p>
         </div>
         <div className="flex gap-3 relative z-[1] shrink-0">
