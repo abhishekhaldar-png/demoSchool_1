@@ -42,6 +42,7 @@ export default function Index() {
       <ContactSection />
       <CtaBanner />
       <Footer />
+      <script src="https://ai-service.edustoke.com/widget?botId=bot_fpzatjox" defer></script>
     </>
   );
 }
